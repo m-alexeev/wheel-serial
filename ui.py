@@ -1,5 +1,5 @@
 import tkinter as tk
-from commands import on_close, readSerial, killThread
+from commands import on_close, readSerial, killThread, startThread
 from utils import serial_ports
 from threading import Thread
 
@@ -22,12 +22,12 @@ com_ports_menu = tk.OptionMenu(com_frame, com_ports_choices, *com_ports).grid(
 
 submit_frame = tk.Frame(root).grid(row=1)
 
-read_thread = Thread(target=readSerial, args=(com_ports_choices,))
+# read_thread = Thread(target=readSerial, args=(com_ports_choices,))
 
 submit_button = tk.Button(
     submit_frame,
     text="Start",
-    command=read_thread.start,
+    command=lambda: startThread(com_ports_choices),
     padx=10,
     pady=5,
 ).grid(row=1, column=1, pady=10)
@@ -35,10 +35,10 @@ submit_button = tk.Button(
 stop_button = tk.Button(
     submit_frame,
     text='Stop',
-    command=lambda: killThread(read_thread),
+    command=lambda: killThread(),
     padx=10,
     pady=5,
 ).grid(row=1, column=0, pady=10)
 
 
-root.protocol("WM_DELETE_WINDOW", lambda:on_close(root,read_thread))
+root.protocol("WM_DELETE_WINDOW", lambda:on_close(root))
