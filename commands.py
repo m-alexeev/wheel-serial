@@ -1,4 +1,4 @@
-from threading import Event, Thread
+from threading import Event, Thread, activeCount
 from keyboard import PressKey, ReleaseKey
 from serial import Serial
 from time import sleep
@@ -76,14 +76,12 @@ def startThread(dropdown_port: StringVar):
     SER_THREADS.append(ThreadWrapper(event, thread))
 
 def killThread():
-    container = SER_THREADS.pop()
-    container.stop()
-
-
-def on_close(root):
     if SER_THREADS:
         container = SER_THREADS.pop()
         container.stop()
+
+def on_close(root):
+    killThread()
     root.destroy()
 
 
