@@ -11,6 +11,7 @@ ALT = 0x83
 
 SER_THREADS = []
 
+
 def NormalPress(keycode: int) -> None:
     PressKey(keycode)
     sleep(0.1)
@@ -31,30 +32,29 @@ def ModPress(keycode: int, mod: int) -> None:
     ReleaseKey(mod)
 
 
-class ThreadWrapper():
+class ThreadWrapper:
     def __init__(self, event: Event, thread: Thread) -> None:
         self.thread = thread
         self.event = event
 
     def stop(self):
-        self.event.set()        
+        self.event.set()
         self.thread.join()
 
 
 class SerialThread(Thread):
-    def __init__(self, event: Event, port: str, baudrate = 9600):
+    def __init__(self, event: Event, port: str, baudrate=9600):
         super(SerialThread, self).__init__()
-        self.event = event 
-        self.port = port 
+        self.event = event
+        self.port = port
         self.baudrate = baudrate
-
 
     def run(self):
         ser = Serial(self.port, self.baudrate, timeout=0)
-        while ser.is_open: 
+        while ser.is_open:
             # Kill loop
             if self.event.is_set():
-                return 
+                return
             while ser.in_waiting:
                 data = ser.readline().decode("utf-8")
                 data = data[:-1]
@@ -75,15 +75,16 @@ def startThread(dropdown_port: StringVar):
     thread.start()
     SER_THREADS.append(ThreadWrapper(event, thread))
 
+
 def killThread():
     if SER_THREADS:
         container = SER_THREADS.pop()
         container.stop()
 
+
 def on_close(root):
     killThread()
     root.destroy()
-
 
 
 def readSerial(port: StringVar, baudrate=9600):
@@ -101,5 +102,3 @@ def readSerial(port: StringVar, baudrate=9600):
             else:
                 ModPress(keycode, mod)
         sleep(0.1)
-
-

@@ -1,2 +1,5 @@
 pyserial
 pyinstaller
+PyQt6
+pyqt6-tools
+pyvjoy

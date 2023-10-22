@@ -34,11 +34,11 @@ submit_button = tk.Button(
 
 stop_button = tk.Button(
     submit_frame,
-    text='Stop',
+    text="Stop",
     command=lambda: killThread(),
     padx=10,
     pady=5,
 ).grid(row=1, column=0, pady=10)
 
 
-root.protocol("WM_DELETE_WINDOW", lambda:on_close(root))
+root.protocol("WM_DELETE_WINDOW", lambda: on_close(root))
