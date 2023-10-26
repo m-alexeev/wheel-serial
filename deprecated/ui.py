@@ -1,7 +1,6 @@
 import tkinter as tk
-from commands import on_close, readSerial, killThread, startThread
+from commands import on_close, killThread, startThread
 from utils import serial_ports
-from threading import Thread
 
 root = tk.Tk()
 root.title("Wheel Serial")
@@ -21,8 +20,6 @@ com_ports_menu = tk.OptionMenu(com_frame, com_ports_choices, *com_ports).grid(
 )
 
 submit_frame = tk.Frame(root).grid(row=1)
-
-# read_thread = Thread(target=readSerial, args=(com_ports_choices,))
 
 submit_button = tk.Button(
     submit_frame,

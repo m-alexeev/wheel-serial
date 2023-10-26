@@ -9,9 +9,9 @@ OFF = 0x0
 
 NUM_BUTTONS = 40
 
-BUTTON_LIST = [f"Button {i + 1}" for i in range(NUM_BUTTONS)]
+BUTTON_INPUTS = [f"Button {i + 1}" for i in range(NUM_BUTTONS)]
 
-JOY_LIST = [
+JOY_INPUTS = [
     "Left",
     "Right",
     "Up",

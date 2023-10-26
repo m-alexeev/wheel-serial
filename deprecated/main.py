@@ -1,4 +1,4 @@
-from ui import root
+from ui.old_ui import root
 
 
 if __name__ == "__main__":
