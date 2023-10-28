@@ -15,6 +15,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.currentSaveFileName = None
         self.actionSave.triggered.connect(self.save_file)
         self.actionOpen.triggered.connect(self.open_file)
+        self.actionSaveAs.triggered.connect(self.save_as_file)
 
         self.initialize_combos()
         
@@ -100,11 +101,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             
         
     def save_file(self):
-        file_name, _ = QFileDialog.getSaveFileName(self, 'Save File', os.getcwd(), "Json Files (*.json)")
-        self.currentSaveFileName = file_name
-        print(file_name)
-        if (file_name):
-            with open(file_name, 'w') as write_file:
+        if (not self.currentSaveFileName):
+            file_name, _ = QFileDialog.getSaveFileName(self, 'Save File', os.getcwd(), "Json Files (*.json)")
+            self.currentSaveFileName = file_name
+            
+        if (self.currentSaveFileName):
+            with open(self.currentSaveFileName, 'w') as write_file:
                 joystick_binds = {
                     i: combo.currentText() for i, combo in enumerate(self.joystick_combos)
                 }
@@ -114,7 +116,26 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 write_file.write(json.dumps({
                     "joystick_binds": joystick_binds, 
                     "button_binds": button_binds
-                }, indent=2))                
+                }, indent=2))
+                
+    def save_as_file(self):
+        file_name, _ = QFileDialog.getSaveFileName(self, 'Save File', os.getcwd(), "Json Files (*.json)")
+        self.currentSaveFileName = file_name
+        
+        if (self.currentSaveFileName):
+            with open(self.currentSaveFileName, 'w') as write_file:
+                joystick_binds = {
+                    i: combo.currentText() for i, combo in enumerate(self.joystick_combos)
+                }
+                button_binds = {
+                    i: combo.currentText() for i, combo in enumerate(self.button_combos)
+                }                
+                write_file.write(json.dumps({
+                    "joystick_binds": joystick_binds, 
+                    "button_binds": button_binds
+                }, indent=2))
+                
+                       
     
     def open_file(self):
         dialog = QFileDialog()
