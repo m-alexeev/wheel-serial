@@ -6,7 +6,6 @@ app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
 
 def execute_mainloop():
-    
     window.show()
     app.exec()
 
