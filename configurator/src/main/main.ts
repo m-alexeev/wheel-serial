@@ -25,6 +25,7 @@ class AppUpdater {
 
 let mainWindow: BrowserWindow | null = null;
 
+
 ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
   console.log(msgTemplate(arg));
@@ -79,6 +80,7 @@ const createWindow = async () => {
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.erb/dll/preload.js'),
     },
+    autoHideMenuBar: true
   });
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));
