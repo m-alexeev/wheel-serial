@@ -1,14 +1,20 @@
 from joystick.constants import BUTTON_INPUTS, JOY_INPUTS
-from ui.MainWindow import Ui_MainWindow
-from ui.closeDialog import Ui_Dialog as Ui_Close_Dialog
-from ui.baudDialog import Ui_Dialog as Ui_Baud_Dialog
-from ui.comDialog import Ui_Dialog as Ui_Com_Dialog
+from ui.generated.MainWindow import Ui_MainWindow
+from ui.baudDialogWindow import BaudDialog
+from ui.comDialogWindow import ComDialog
+from ui.closeDialogWindow import CloseDialog
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QFileDialog, QDialog
+from PyQt6.QtCore import QThread
+from PyQt6.QtWidgets import QFileDialog
 from utils import serial_ports
 import os
 import json
+import enum
 
+
+class AppState(enum.Enum):
+    RUNNING = 1
+    STOPPED = 2
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, obj=None, **kwargs) -> None:
@@ -27,6 +33,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.unsaved_changes = False
         self.com_port = serial_ports[0]
         self.baud_rate = 9600
+        self.state = AppState.STOPPED
 
         self.initialize_combos()
 
@@ -198,64 +205,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.com_port = com_port_dialog.com_port
         print(self.com_port)
 
-class CloseDialog(QDialog, Ui_Close_Dialog):
-    """Close dialog."""
-
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setupUi(self)
 
 
-class BaudDialog(QDialog, Ui_Baud_Dialog):
-    """Dialog for selecting com port baudrate"""
 
-    def __init__(self, parent: None) -> None:
-        super().__init__(parent)
-        self.setupUi(self)
-
-        self._populate_combo_box()
-        self.baud_rate = None
-        
-    def _populate_combo_box(self):
-        baud_rates = [
-            "110",
-            "300",
-            "600",
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "38400",
-            "57600",
-            "115200",
-            "128000",
-            "256000",
-        ]
-        self.baudCombo.addItems(baud_rates)
-            
-    def accept(self) -> None:
-        if (self.baudCombo.currentIndex() > -1):
-            self.baud_rate = self.baudCombo.currentText()
-        return super().accept()        
-
-
-class ComDialog(QDialog, Ui_Com_Dialog):
-    """Dialog for selecting the desired com port"""
-
-    def __init__(self, parent: None) -> None:
-        super().__init__(parent)
-        self.setupUi(self)
-
-        self._populate_combo_box()
-        self.com_port = None
-    
-    def _populate_combo_box(self):
-        com_ports = serial_ports()
-        self.portCombo.addItems(com_ports)
-
-    def accept(self) -> None:
-        if (self.portCombo.currentIndex() > -1):
-            self.com_port = self.portCombo.currentText()
-        return super().accept()
