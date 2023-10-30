@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '.\ui\mainWindow.ui'
+# Form implementation generated from reading ui file '.\ui\MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(924, 761)
+        MainWindow.resize(920, 752)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setMaximumSize(QtCore.QSize(918, 16777215))
         self.centralwidget.setObjectName("centralwidget")
@@ -1023,7 +1023,7 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menuBar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 924, 22))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 920, 22))
         self.menuBar.setObjectName("menuBar")
         self.menuFile = QtWidgets.QMenu(parent=self.menuBar)
         self.menuFile.setObjectName("menuFile")
@@ -1034,9 +1034,13 @@ class Ui_MainWindow(object):
         self.actionSaveAs.setObjectName("actionSaveAs")
         self.actionOpen = QtGui.QAction(parent=MainWindow)
         self.actionOpen.setObjectName("actionOpen")
+        self.actionClose = QtGui.QAction(parent=MainWindow)
+        self.actionClose.setObjectName("actionClose")
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
         self.menuFile.addAction(self.actionSaveAs)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionClose)
         self.menuBar.addAction(self.menuFile.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -1194,5 +1198,11 @@ class Ui_MainWindow(object):
         self.rotencodercombo_9.setPlaceholderText(_translate("MainWindow", "Select Input"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
+        self.actionSave.setToolTip(_translate("MainWindow", "Save"))
+        self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.actionSaveAs.setText(_translate("MainWindow", "Save As"))
+        self.actionSaveAs.setShortcut(_translate("MainWindow", "Ctrl+Shift+S"))
         self.actionOpen.setText(_translate("MainWindow", "Open"))
+        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O"))
+        self.actionClose.setText(_translate("MainWindow", "Close"))
+        self.actionClose.setShortcut(_translate("MainWindow", "Ctrl+Q"))
