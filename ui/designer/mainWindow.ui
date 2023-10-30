@@ -22,7 +22,34 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_19">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,1">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,2,1">
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>State</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_23">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,10">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Driver State:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="driverStateLabel">
+             <property name="text">
+              <string>STOPPED</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_71" stretch="2,1">
         <item>
@@ -2140,8 +2167,15 @@
     <addaction name="actionRun"/>
     <addaction name="actionStop"/>
    </widget>
+   <widget class="QMenu" name="menuTootls">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionSerialMonitor"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuRun"/>
+   <addaction name="menuTootls"/>
   </widget>
   <action name="actionSave">
    <property name="text">
@@ -2202,6 +2236,14 @@
   <action name="actionStop">
    <property name="text">
     <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionSerialMonitor">
+   <property name="text">
+    <string>Serial Monitor</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
    </property>
   </action>
  </widget>

@@ -3,6 +3,7 @@ from ui.generated.MainWindow import Ui_MainWindow
 from ui.baudDialogWindow import BaudDialog
 from ui.comDialogWindow import ComDialog
 from ui.closeDialogWindow import CloseDialog
+from ui.serialWorker import SerialWorker
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QThread
 from PyQt6.QtWidgets import QFileDialog
@@ -23,15 +24,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle("Wheel Binding Configurator")
 
         self.currentSaveFile = None
+
+        # Action bindings
         self.actionSave.triggered.connect(self.save_file)
         self.actionOpen.triggered.connect(self.open_file)
         self.actionSaveAs.triggered.connect(self.save_as_file)
         self.actionClose.triggered.connect(self.exit)
         self.actionBaud.triggered.connect(self.baud_rate_dialog)
         self.actionCom.triggered.connect(self.com_port_dialog)
+        self.actionRun.triggered.connect(self.start_driver)
+        self.actionStop.triggered.connect(self.stop_driver)
+
+        self.serialThread = QThread()
+        self.serialWorker = SerialWorker()
+        self.serialWorker.moveToThread(self.serialThread)
+
 
         self.unsaved_changes = False
-        self.com_port = serial_ports[0]
+        self.com_port = serial_ports()[0]
         self.baud_rate = 9600
         self.state = AppState.STOPPED
 
@@ -94,6 +104,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         for combo in self.button_combos:
             combo.addItems(BUTTON_INPUTS)
+
+    def start_driver(self):
+        self.serialWorker.stop_flag = False
+        self.serialThread.started.connect(self.serialWorker.run)
+        self.serialWorker.completed.connect(self.driver_completed)
+        
+        self.serialThread.start()
+        self.state = AppState.RUNNING
+        self.driverStateLabel.setText(self.state.name)
+    
+    def stop_driver(self):
+        if (self.serialThread and self.serialThread.isRunning):
+            self.serialWorker.stop_flag = True
+        self.state = AppState.STOPPED
+        self.driverStateLabel.setText(self.state.name)
+    
+    def driver_completed(self):
+        print("Thread Completed")
 
     def _load_config(self, file_name):
         if not os.path.isfile(file_name):
@@ -168,6 +196,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self, "Open File", "", "Json Files (*.json)"
         )
         self._load_config(file_name)
+
 
     def closeEvent(self, evnt):
         if self.unsaved_changes:
