@@ -4,6 +4,7 @@ from ui.baudDialogWindow import BaudDialog
 from ui.comDialogWindow import ComDialog
 from ui.closeDialogWindow import CloseDialog
 from ui.serialWorker import SerialWorker
+from ui.serialMonitorDialogWindow import SerialMonitorDialog
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QThread
 from PyQt6.QtWidgets import QFileDialog
@@ -30,11 +31,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionOpen.triggered.connect(self.open_file)
         self.actionSaveAs.triggered.connect(self.save_as_file)
         self.actionClose.triggered.connect(self.exit)
+        
+        # Driver Actions
         self.actionBaud.triggered.connect(self.baud_rate_dialog)
         self.actionCom.triggered.connect(self.com_port_dialog)
         self.actionRun.triggered.connect(self.start_driver)
         self.actionStop.triggered.connect(self.stop_driver)
-
+        
+        #Serial Monitor Actions 
+        self.actionSerialMonitor.triggered.connect(self.serial_monitor_dialog)
 
 
         self.unsaved_changes = False
@@ -230,7 +235,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if (accepted):
             self.baud_rate = int(baud_dialog.baud_rate)
             self.serialWorker.setBaudrate(self.baud_rate)
-        print(self.baud_rate)
 
     def com_port_dialog(self):
         com_port_dialog = ComDialog(self)
@@ -238,8 +242,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if (accepted):
             self.com_port = com_port_dialog.com_port
             self.serialWorker.setPort(self.com_port)
-        print(self.com_port)
 
-
-
+    
+    def serial_monitor_dialog(self):
+        serial_monitor_window = SerialMonitorDialog(self)
+        serial_monitor_window.exec()
 

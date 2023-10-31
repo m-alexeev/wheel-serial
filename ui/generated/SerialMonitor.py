@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
+        Dialog.resize(400, 377)
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.scrollArea = QtWidgets.QScrollArea(parent=Dialog)
@@ -20,7 +20,7 @@ class Ui_Dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 380, 250))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 380, 325))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -31,9 +31,15 @@ class Ui_Dialog(object):
         self.horizontalLayout.addWidget(self.serialText)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout.addWidget(self.scrollArea)
-        self.closeButton = QtWidgets.QPushButton(parent=Dialog)
-        self.closeButton.setObjectName("closeButton")
-        self.verticalLayout.addWidget(self.closeButton)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.closeMonitor = QtWidgets.QPushButton(parent=Dialog)
+        self.closeMonitor.setObjectName("closeMonitor")
+        self.horizontalLayout_2.addWidget(self.closeMonitor)
+        self.clearMonitor = QtWidgets.QPushButton(parent=Dialog)
+        self.clearMonitor.setObjectName("clearMonitor")
+        self.horizontalLayout_2.addWidget(self.clearMonitor)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -41,4 +47,5 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.closeButton.setText(_translate("Dialog", "Close"))
+        self.closeMonitor.setText(_translate("Dialog", "Close"))
+        self.clearMonitor.setText(_translate("Dialog", "Clear Output"))
