@@ -7,7 +7,7 @@ from ui.serialWorker import SerialWorker
 from ui.serialMonitorDialogWindow import SerialMonitorDialog
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QThread
-from PyQt6.QtWidgets import QFileDialog
+from PyQt6.QtWidgets import QFileDialog, QApplication
 from utils import serial_ports
 import os
 import json
@@ -48,6 +48,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.state = AppState.STOPPED
         self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
         self.serialWorker.completed.connect(self.driver_completed)
+        self.serialWorker.received_input.connect(self.process_input)
 
         self.initialize_combos()
 
@@ -245,6 +246,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     
     def serial_monitor_dialog(self):
-        serial_monitor_window = SerialMonitorDialog(self)
-        serial_monitor_window.exec()
+        self.serial_monitor_window = SerialMonitorDialog(self)
+        self.serial_monitor_window.exec()
 
+    def process_input(self, data):
+        active_window = QApplication.activeWindow()
+        if (active_window.windowTitle() == "Serial Monitor"):
+            # Send data to serial monitor 
+            self.serial_monitor_window.received_data.emit(data)
+        
+        
