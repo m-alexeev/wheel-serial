@@ -42,6 +42,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.baud_rate = 9600
         self.state = AppState.STOPPED
         self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
+        self.serialWorker.completed.connect(self.driver_completed)
 
         self.initialize_combos()
 
@@ -110,7 +111,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # Start Thread
         self.serialWorker.stop_flag = False
-        self.serialWorker.completed.connect(self.driver_completed)
         
         self.serialWorker.start()
         self.state = AppState.RUNNING
