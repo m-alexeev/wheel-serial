@@ -35,13 +35,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionRun.triggered.connect(self.start_driver)
         self.actionStop.triggered.connect(self.stop_driver)
 
-        self.serialWorker = SerialWorker()
 
 
         self.unsaved_changes = False
         self.com_port = serial_ports()[0]
         self.baud_rate = 9600
         self.state = AppState.STOPPED
+        self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
 
         self.initialize_combos()
 
@@ -104,6 +104,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             combo.addItems(BUTTON_INPUTS)
 
     def start_driver(self):
+        # Disable com and baudrate dialogs
+        self.actionBaud.setEnabled(False)
+        self.actionCom.setEnabled(False)
+
+        # Start Thread
         self.serialWorker.stop_flag = False
         self.serialWorker.completed.connect(self.driver_completed)
         
@@ -119,6 +124,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     
     def driver_completed(self):
         print("Thread Completed")
+        # Enable com and baudrate dialogs
+        self.actionBaud.setEnabled(True)
+        self.actionCom.setEnabled(True)
+
 
     def _load_config(self, file_name):
         if not os.path.isfile(file_name):
@@ -214,14 +223,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if accepted:
             self.close()
 
-    def _receive_baudrate(value):
-        print(value)
 
     def baud_rate_dialog(self):
         baud_dialog = BaudDialog(self)
         accepted = baud_dialog.exec()
         if (accepted):
             self.baud_rate = int(baud_dialog.baud_rate)
+            self.serialWorker.setBaudrate(self.baud_rate)
         print(self.baud_rate)
 
     def com_port_dialog(self):
@@ -229,6 +237,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         accepted = com_port_dialog.exec()
         if (accepted):
             self.com_port = com_port_dialog.com_port
+            self.serialWorker.setPort(self.com_port)
         print(self.com_port)
 
 
