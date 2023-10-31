@@ -35,9 +35,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionRun.triggered.connect(self.start_driver)
         self.actionStop.triggered.connect(self.stop_driver)
 
-        self.serialThread = QThread()
         self.serialWorker = SerialWorker()
-        self.serialWorker.moveToThread(self.serialThread)
 
 
         self.unsaved_changes = False
@@ -107,15 +105,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def start_driver(self):
         self.serialWorker.stop_flag = False
-        self.serialThread.started.connect(self.serialWorker.run)
         self.serialWorker.completed.connect(self.driver_completed)
         
-        self.serialThread.start()
+        self.serialWorker.start()
         self.state = AppState.RUNNING
         self.driverStateLabel.setText(self.state.name)
     
     def stop_driver(self):
-        if (self.serialThread and self.serialThread.isRunning):
+        if (self.serialWorker.isRunning):
             self.serialWorker.stop_flag = True
         self.state = AppState.STOPPED
         self.driverStateLabel.setText(self.state.name)

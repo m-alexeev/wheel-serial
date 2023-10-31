@@ -1,7 +1,7 @@
-from PyQt6.QtCore import QObject, pyqtSignal
-from time import sleep
+from PyQt6.QtCore import QThread, pyqtSignal
+from serial import Serial
 
-class SerialWorker(QObject):
+class SerialWorker(QThread):
     completed = pyqtSignal()
     received_input = pyqtSignal(str)
     
@@ -9,8 +9,12 @@ class SerialWorker(QObject):
 
     def run(self):
         # READ serial port
+        ser = Serial()
         while not self.stop_flag: 
-            print('Running')
+            while ser.is_open:
+                while ser.in_waiting:
+                    data = ser.readline().decode('utf-8')
+                    print(data)
         else:
             self.completed.emit()
     
