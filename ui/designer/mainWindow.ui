@@ -30,7 +30,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_23">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,10">
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,10,0,0">
            <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
@@ -42,6 +42,20 @@
             <widget class="QLabel" name="driverStateLabel">
              <property name="text">
               <string>STOPPED</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="startDriverButton">
+             <property name="text">
+              <string>Start</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="stopDriverButton">
+             <property name="text">
+              <string>Stop</string>
              </property>
             </widget>
            </item>
@@ -2178,6 +2192,9 @@
    <addaction name="menuTootls"/>
   </widget>
   <action name="actionSave">
+   <property name="icon">
+    <iconset theme="document-save"/>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>

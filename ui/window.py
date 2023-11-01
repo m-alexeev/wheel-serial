@@ -21,22 +21,13 @@ class AppState(enum.Enum):
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, obj=None, **kwargs) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
-
         self.setupUi(self)
         self.setWindowTitle("Wheel Binding Configurator")
-        
 
         self._initialize_windows()
         self._initialize_actions()
-
-        self.currentSaveFile = None
-        self.unsaved_changes = False
-        self.com_port = serial_ports()[0]
-        self.baud_rate = 9600
-        self.state = AppState.STOPPED
-
+        self._initialize_defaults()
         self._initialize_worker()
-
         self._initialize_combos()
 
         self.load_default_config()
@@ -57,9 +48,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Serial Monitor Actions
         self.actionSerialMonitor.triggered.connect(self.show_serial_monitor)
 
+    def _initialize_defaults(self):
+        self.currentSaveFile = None
+        self.unsaved_changes = False
+        self.com_port = serial_ports()[0]
+        self.baud_rate = 9600
+        self.state = AppState.STOPPED
+
+
     def _initialize_windows(self):
         self.serial_monitor = None
-
 
     def _initialize_worker(self):
         self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
@@ -232,13 +230,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle("Wheel Binding Configurator *")
         self.unsaved_changes = True
 
-    def exit(self):
-        closeDialog = CloseDialog(self)
-        accepted = closeDialog.exec()
-
-        if accepted:
-            self.close()
-
     def baud_rate_dialog(self):
         baud_dialog = BaudDialog(self)
         accepted = baud_dialog.exec()
@@ -265,3 +256,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if self.serial_monitor is not None:
             # Send data to serial monitor
             self.serial_monitor.received_data.emit(data)
+
+    def exit(self):
+        closeDialog = CloseDialog(self)
+        accepted = closeDialog.exec()
+
+        if accepted:
+            self.close()

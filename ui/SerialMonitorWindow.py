@@ -15,7 +15,7 @@ class SerialMonitor(QWidget, Ui_Frame):
         self.show_timestamp = True
         self.scroll_to_bottom = True
 
-        self.received_data.connect(self.process_data)
+        self.received_data.connect(self.update_monitor)
 
         self.closeMonitor.clicked.connect(self.close)
         self.clearMonitor.clicked.connect(self.clear_monitor)
@@ -34,7 +34,9 @@ class SerialMonitor(QWidget, Ui_Frame):
     def clear_monitor(self):
         self.serialText.setText("")
 
-    def process_data(self, data):
+
+
+    def update_monitor(self, data):
         # Append data to serial monitor 
         if (self.show_timestamp):
             data = f'{datetime.now().isoformat()} | {data}'
