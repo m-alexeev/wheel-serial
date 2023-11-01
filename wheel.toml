@@ -1,0 +1,5 @@
+[tool.poetry]
+name = "wheel-serial"
+version = "0.1.0"
+description = "Wheel Driver for reading serial port and emulating joystick"
+authors = ["Mikhail Alexeev <mishalxv35@gmail.com"]
