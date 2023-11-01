@@ -50,6 +50,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         """
         Internal function for creating all of the bindings
         """
+        # Disable Stop Button
+        self.stopDriverButton.setEnabled(False)
+        self.actionStop.setEnabled(False)
+
+        # Button Bindings
+        self.startDriverButton.clicked.connect(self.start_driver)
+        self.stopDriverButton.clicked.connect(self.stop_driver)
 
         # Action bindings
         self.actionSave.triggered.connect(self.save_file)
@@ -157,6 +164,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         """
         Trigger to start the serial port worker
         """
+        # Disable run button
+        self.startDriverButton.setEnabled(False)
+        self.actionRun.setEnabled(False)
+        self.stopDriverButton.setEnabled(True)
+        self.actionStop.setEnabled(True)
 
         # Disable com and baudrate dialogs
         self.actionBaud.setEnabled(False)
@@ -188,6 +200,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Enable com and baudrate dialogs
         self.actionBaud.setEnabled(True)
         self.actionCom.setEnabled(True)
+
+        # Enable start buttons 
+        self.actionRun.setEnabled(True)
+        self.startDriverButton.setEnabled(True)
+        self.stopDriverButton.setEnabled(False)
+        self.actionStop.setEnabled(False)
 
     def _load_config(self, file_name: str):
         """
