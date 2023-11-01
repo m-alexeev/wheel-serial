@@ -1,19 +1,33 @@
-from joystick.constants import BUTTON_INPUTS, JOY_INPUTS
 from driver.serialWorker import SerialWorker
+import enum
+from joystick.constants import BUTTON_INPUTS, JOY_INPUTS
+import json
+import os
+from PyQt6 import QtWidgets
+from PyQt6.QtWidgets import QFileDialog, QApplication
 from ui.generated.MainWindow import Ui_MainWindow
 from ui.baudDialog import BaudDialog
 from ui.comDialog import ComDialog
 from ui.closeDialog import CloseDialog
 from ui.SerialMonitorWindow import SerialMonitor
-from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QFileDialog, QApplication
 from utils import serial_ports
-import os
-import json
-import enum
+
+"""
+MainWindow
+
+Main application GUI module reponsible for driving other modules,
+saving and loading user configurations, and altering the wheel bindings
+with use of a GUI
+
+Author: Mikhail Alexeev
+Last Modified: Nov 1, 2023
+"""
 
 
 class AppState(enum.Enum):
+    """
+    Enum for defining driver state constants
+    """
     RUNNING = 1
     STOPPED = 2
 
@@ -33,6 +47,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.load_default_config()
 
     def _initialize_actions(self):
+        """
+        Internal function for creating all of the bindings
+        """
+
         # Action bindings
         self.actionSave.triggered.connect(self.save_file)
         self.actionOpen.triggered.connect(self.open_file)
@@ -49,6 +67,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionSerialMonitor.triggered.connect(self.show_serial_monitor)
 
     def _initialize_defaults(self):
+        """
+        Internal function for defining default module variables
+        """
+
         self.currentSaveFile = None
         self.unsaved_changes = False
         self.com_port = serial_ports()[0]
@@ -56,14 +78,26 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.state = AppState.STOPPED
 
     def _initialize_windows(self):
+        """
+        Internal function for defining extra windows
+        """
+
         self.serial_monitor = None
 
     def _initialize_worker(self):
+        """
+        Internal function for defining thread workers
+        """
+
         self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
         self.serialWorker.completed.connect(self.driver_completed)
         self.serialWorker.received_input.connect(self.process_input)
 
     def _initialize_combos(self):
+        """
+        Internal function for prepopulating dropdown options
+        """
+
         self.joystick_combos = [
             self.joycombo_1,
             self.joycombo_2,
@@ -120,6 +154,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             combo.addItems(BUTTON_INPUTS)
 
     def start_driver(self):
+        """
+        Trigger to start the serial port worker
+        """
+
         # Disable com and baudrate dialogs
         self.actionBaud.setEnabled(False)
         self.actionCom.setEnabled(False)
@@ -132,18 +170,33 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.driverStateLabel.setText(self.state.name)
 
     def stop_driver(self):
+        """
+        Trigger to stop serial port worker
+        """
+
         if self.serialWorker.isRunning:
             self.serialWorker.stop_flag = True
         self.state = AppState.STOPPED
         self.driverStateLabel.setText(self.state.name)
 
     def driver_completed(self):
+        """
+        Callback that is executed when serial port worker completes
+        """
+
         print("Thread Completed")
         # Enable com and baudrate dialogs
         self.actionBaud.setEnabled(True)
         self.actionCom.setEnabled(True)
 
-    def _load_config(self, file_name):
+    def _load_config(self, file_name: str):
+        """
+        Internal function to load user configuration and populate dropdown
+
+        Args:
+            file_name: Path to config file
+        """
+
         if not os.path.isfile(file_name):
             return
         with open(file_name, "r") as file:
@@ -165,13 +218,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             combo.currentIndexChanged.connect(self.on_combo_box_changed)
 
     def load_default_config(self):
-        if self.currentSaveFile == None:
+        """
+        Load default configuration at launch
+        """
+
+        if self.currentSaveFile is None:
             home_dir = os.path.expanduser("~")
             self.currentSaveFile = os.path.join(home_dir, "wheel_binds.json")
 
         self._load_config(self.currentSaveFile)
 
     def _write_to_file(self):
+        """
+        Internal function to dump config to a file
+        """
+
         if self.currentSaveFile:
             with open(self.currentSaveFile, "w") as write_file:
                 joystick_binds = {
@@ -194,6 +255,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.setWindowTitle("Wheel Binding Configurator")
 
     def save_file(self):
+        """
+        Trigger to execute save command
+        """
+
         if not self.currentSaveFile:
             file_name, _ = QFileDialog.getSaveFileName(
                 self, "Save File", os.getcwd(), "Json Files (*.json)"
@@ -203,6 +268,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self._write_to_file()
 
     def save_as_file(self):
+        """
+        Trigger to execute Save As command
+        """
+
         file_name, _ = QFileDialog.getSaveFileName(
             self, "Save File", os.getcwd(), "Json Files (*.json)"
         )
@@ -211,6 +280,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self._write_to_file()
 
     def open_file(self):
+        """
+        Trigger to open a file
+        """
+
         dialog = QFileDialog()
         file_name, _ = dialog.getOpenFileName(
             self, "Open File", "", "Json Files (*.json)"
@@ -218,6 +291,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self._load_config(file_name)
 
     def closeEvent(self, evnt):
+        """
+        Overiding main window close event to display a warning popup if file is not saved
+
+        Args:
+            evnt: Close event
+        """
+
         if self.unsaved_changes:
             closeDialog = CloseDialog(self)
             res = closeDialog.exec()
@@ -226,10 +306,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 evnt.ignore()
 
     def on_combo_box_changed(self):
+        """
+        Trigger to set unsaved changes flag
+        """
+
         self.setWindowTitle("Wheel Binding Configurator *")
         self.unsaved_changes = True
 
     def baud_rate_dialog(self):
+        """
+        Trigger to open baudrate dialog
+        """
+
         baud_dialog = BaudDialog(self)
         accepted = baud_dialog.exec()
         if accepted:
@@ -237,6 +325,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.serialWorker.set_baudrate(self.baud_rate)
 
     def com_port_dialog(self):
+        """
+        Trigger to open com port selection dialog
+        """
+
         com_port_dialog = ComDialog(self)
         accepted = com_port_dialog.exec()
         if accepted:
@@ -244,6 +336,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.serialWorker.set_port(self.com_port)
 
     def show_serial_monitor(self):
+        """
+        Trigger to open serial monitor
+        """
+
         if self.serial_monitor is None:
             self.serial_monitor = SerialMonitor()
             self.serial_monitor.show()
@@ -251,12 +347,22 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.serial_monitor.close()
             self.serial_monitor = None
 
-    def process_input(self, data):
+    def process_input(self, data: str):
+        """
+        Callback from worker thread upon receiving input from serial port
+
+        Args:
+            data: String data from serial port
+        """
+
         if self.serial_monitor is not None:
             # Send data to serial monitor
             self.serial_monitor.received_data.emit(data)
 
     def exit(self):
+        """
+        Exit Trigger
+        """
         closeDialog = CloseDialog(self)
         accepted = closeDialog.exec()
 

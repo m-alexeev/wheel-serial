@@ -1,7 +1,17 @@
-from PyQt6.QtWidgets import QWidget
-from PyQt6.QtCore import pyqtSignal
-from ui.generated.SerialMonitor import Ui_Frame
 from datetime import datetime
+from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtWidgets import QWidget
+from ui.generated.SerialMonitor import Ui_Frame
+
+"""
+SerialMonitor
+
+Serial Monitor window for displaying data that is being
+read from the serial port by the worker thread
+
+Author: Mikhail Alexeev
+LastModified: Nov 1, 2023
+"""
 
 
 class SerialMonitor(QWidget, Ui_Frame):
@@ -36,7 +46,14 @@ class SerialMonitor(QWidget, Ui_Frame):
     def clear_monitor(self):
         self.serialText.setText("")
 
-    def update_monitor(self, data):
+    def update_monitor(self, data: str):
+        """
+        Trigger to update the text label that updates the text widget
+        when new data is received
+
+        Args:
+            data: Text data that is received in serial port
+        """
         # Append data to serial monitor
         if self.show_timestamp:
             data = f"{datetime.now().isoformat()} | {data}"

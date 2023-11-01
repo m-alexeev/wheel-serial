@@ -1,6 +1,17 @@
-from PyQt6.QtCore import QThread, pyqtSignal
-from serial import Serial
 from time import sleep
+from serial import Serial
+from PyQt6.QtCore import QThread, pyqtSignal
+
+"""
+SerialWorker
+
+Worker Thread that runs separately from UI thread
+to avoid blocking and reads the serial port sending
+updates to caller
+
+Author: Mikhail Alexeev
+Last Modified: Nov 1, 2023
+"""
 
 
 class SerialWorker(QThread):

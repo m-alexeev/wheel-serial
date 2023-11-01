@@ -45,7 +45,7 @@ class BaudDialog(QDialog, Ui_Dialog):
 
     def accept(self) -> None:
         """
-        Extended accept function that gets called from the default accept action 
+        Extended accept function that is called from the default accept action
         of a dialog. Extended to only set a baudrate if one is selected
         """
         if self.baudCombo.currentIndex() > -1:

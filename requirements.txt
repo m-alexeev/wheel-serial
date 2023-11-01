@@ -1,5 +1,7 @@
-pyserial
+black
+pycodestyle
 pyinstaller
+pyserial
 PyQt6
 pyqt6-tools
 pyvjoy
