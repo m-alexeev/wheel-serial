@@ -244,14 +244,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         accepted = baud_dialog.exec()
         if accepted:
             self.baud_rate = int(baud_dialog.baud_rate)
-            self.serialWorker.setBaudrate(self.baud_rate)
+            self.serialWorker.set_baudrate(self.baud_rate)
 
     def com_port_dialog(self):
         com_port_dialog = ComDialog(self)
         accepted = com_port_dialog.exec()
         if accepted:
             self.com_port = com_port_dialog.com_port
-            self.serialWorker.setPort(self.com_port)
+            self.serialWorker.set_port(self.com_port)
 
     def show_serial_monitor(self):
         if self.serial_monitor is None:

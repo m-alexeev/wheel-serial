@@ -1,7 +1,7 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout
+from PyQt6.QtWidgets import QWidget
 from PyQt6.QtCore import pyqtSignal
 from ui.generated.SerialMonitor import Ui_Frame
-
+from datetime import datetime
 
 class SerialMonitor(QWidget, Ui_Frame):
     """Serial Monitor Window"""
@@ -23,6 +23,7 @@ class SerialMonitor(QWidget, Ui_Frame):
 
     def process_data(self, data):
         # Append data to serial monitor 
+        data = f'{datetime.now().isoformat()} | {data}'
         current_text = self.serialText.text()
         new_text = current_text + data
         self.serialText.setText(new_text)
