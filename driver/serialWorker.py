@@ -1,5 +1,4 @@
-import typing
-from PyQt6.QtCore import QObject, QThread, pyqtSignal
+from PyQt6.QtCore import QThread, pyqtSignal
 from serial import Serial
 from time import sleep
 
@@ -26,7 +25,6 @@ class SerialWorker(QThread):
         ser = Serial(self.port,  self.baudrate, timeout=0)
         while not self.stop_flag: 
             sleep(0.5)
-            self.received_input.emit("Sending Data...\n")
             # while ser.is_open and not self.stop_flag:
             #     while ser.in_waiting:
             #         # Reading COM Port

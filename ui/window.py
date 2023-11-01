@@ -1,12 +1,11 @@
 from joystick.constants import BUTTON_INPUTS, JOY_INPUTS
+from driver.serialWorker import SerialWorker
 from ui.generated.MainWindow import Ui_MainWindow
-from ui.baudDialogWindow import BaudDialog
-from ui.comDialogWindow import ComDialog
-from ui.closeDialogWindow import CloseDialog
-from ui.serialWorker import SerialWorker
-from ui.serialMonitorDialogWindow import SerialMonitorDialog
+from ui.baudDialog import BaudDialog
+from ui.comDialog import ComDialog
+from ui.closeDialog import CloseDialog
+from ui.SerialMonitorWindow import SerialMonitor
 from PyQt6 import QtWidgets
-from PyQt6.QtCore import QThread
 from PyQt6.QtWidgets import QFileDialog, QApplication
 from utils import serial_ports
 import os
@@ -246,8 +245,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     
     def serial_monitor_dialog(self):
-        self.serial_monitor_window = SerialMonitorDialog(self)
-        self.serial_monitor_window.exec()
+        self.serial_monitor_window = SerialMonitor()
+        self.serial_monitor_window.show()
 
     def process_input(self, data):
         active_window = QApplication.activeWindow()

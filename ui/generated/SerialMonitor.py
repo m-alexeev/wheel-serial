@@ -9,18 +9,18 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 377)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+class Ui_Frame(object):
+    def setupUi(self, Frame):
+        Frame.setObjectName("Frame")
+        Frame.resize(400, 300)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Frame)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.scrollArea = QtWidgets.QScrollArea(parent=Dialog)
+        self.scrollArea = QtWidgets.QScrollArea(parent=Frame)
         self.scrollArea.setStyleSheet("background-color: rgb(255, 255, 255)")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 380, 325))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 380, 248))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -33,19 +33,19 @@ class Ui_Dialog(object):
         self.verticalLayout.addWidget(self.scrollArea)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.closeMonitor = QtWidgets.QPushButton(parent=Dialog)
+        self.closeMonitor = QtWidgets.QPushButton(parent=Frame)
         self.closeMonitor.setObjectName("closeMonitor")
         self.horizontalLayout_2.addWidget(self.closeMonitor)
-        self.clearMonitor = QtWidgets.QPushButton(parent=Dialog)
+        self.clearMonitor = QtWidgets.QPushButton(parent=Frame)
         self.clearMonitor.setObjectName("clearMonitor")
         self.horizontalLayout_2.addWidget(self.clearMonitor)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(Frame)
+        QtCore.QMetaObject.connectSlotsByName(Frame)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Frame):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.closeMonitor.setText(_translate("Dialog", "Close"))
-        self.clearMonitor.setText(_translate("Dialog", "Clear Output"))
+        Frame.setWindowTitle(_translate("Frame", "Frame"))
+        self.closeMonitor.setText(_translate("Frame", "Close"))
+        self.clearMonitor.setText(_translate("Frame", "Clear Output"))

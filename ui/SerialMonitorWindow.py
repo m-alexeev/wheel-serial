@@ -1,14 +1,14 @@
-from PyQt6.QtWidgets import QDialog
+from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtCore import pyqtSignal
-from ui.generated.SerialMonitor import Ui_Dialog
+from ui.generated.SerialMonitor import Ui_Frame
 
 
-class SerialMonitorDialog(QDialog, Ui_Dialog):
+class SerialMonitor(QWidget, Ui_Frame):
     """Serial Monitor Window"""
     received_data = pyqtSignal(str)
 
-    def __init__(self, parent = None): 
-        super().__init__(parent)
+    def __init__(self): 
+        super().__init__()
         self.setupUi(self)
         self.setWindowTitle("Serial Monitor")
 
@@ -26,3 +26,4 @@ class SerialMonitorDialog(QDialog, Ui_Dialog):
         current_text = self.serialText.text()
         new_text = current_text + data
         self.serialText.setText(new_text)
+
