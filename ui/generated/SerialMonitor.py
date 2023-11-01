@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Frame(object):
     def setupUi(self, Frame):
         Frame.setObjectName("Frame")
-        Frame.resize(400, 300)
+        Frame.resize(774, 545)
         self.verticalLayout = QtWidgets.QVBoxLayout(Frame)
         self.verticalLayout.setObjectName("verticalLayout")
         self.scrollArea = QtWidgets.QScrollArea(parent=Frame)
@@ -20,11 +20,12 @@ class Ui_Frame(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 380, 248))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 754, 493))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.serialText = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
+        self.serialText.setBaseSize(QtCore.QSize(720, 480))
         self.serialText.setText("")
         self.serialText.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.serialText.setObjectName("serialText")
@@ -33,6 +34,12 @@ class Ui_Frame(object):
         self.verticalLayout.addWidget(self.scrollArea)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.timestampCheck = QtWidgets.QCheckBox(parent=Frame)
+        self.timestampCheck.setObjectName("timestampCheck")
+        self.horizontalLayout_2.addWidget(self.timestampCheck)
+        self.scrollBottomCheck = QtWidgets.QCheckBox(parent=Frame)
+        self.scrollBottomCheck.setObjectName("scrollBottomCheck")
+        self.horizontalLayout_2.addWidget(self.scrollBottomCheck)
         self.closeMonitor = QtWidgets.QPushButton(parent=Frame)
         self.closeMonitor.setObjectName("closeMonitor")
         self.horizontalLayout_2.addWidget(self.closeMonitor)
@@ -47,5 +54,7 @@ class Ui_Frame(object):
     def retranslateUi(self, Frame):
         _translate = QtCore.QCoreApplication.translate
         Frame.setWindowTitle(_translate("Frame", "Frame"))
+        self.timestampCheck.setText(_translate("Frame", "Enable Timestamp"))
+        self.scrollBottomCheck.setText(_translate("Frame", "Scroll to Bottom"))
         self.closeMonitor.setText(_translate("Frame", "Close"))
         self.clearMonitor.setText(_translate("Frame", "Clear Output"))

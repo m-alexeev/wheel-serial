@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>774</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,13 +27,19 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>380</width>
-        <height>248</height>
+        <width>754</width>
+        <height>493</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="serialText">
+         <property name="baseSize">
+          <size>
+           <width>720</width>
+           <height>480</height>
+          </size>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -48,6 +54,20 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QCheckBox" name="timestampCheck">
+       <property name="text">
+        <string>Enable Timestamp</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="scrollBottomCheck">
+       <property name="text">
+        <string>Scroll to Bottom</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="closeMonitor">
        <property name="text">
