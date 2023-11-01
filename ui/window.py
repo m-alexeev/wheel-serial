@@ -17,43 +17,56 @@ class AppState(enum.Enum):
     RUNNING = 1
     STOPPED = 2
 
+
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, obj=None, **kwargs) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+
         self.setupUi(self)
         self.setWindowTitle("Wheel Binding Configurator")
+        
+
+        self._initialize_windows()
+        self._initialize_actions()
 
         self.currentSaveFile = None
+        self.unsaved_changes = False
+        self.com_port = serial_ports()[0]
+        self.baud_rate = 9600
+        self.state = AppState.STOPPED
 
+        self._initialize_worker()
+
+        self._initialize_combos()
+
+        self.load_default_config()
+
+    def _initialize_actions(self):
         # Action bindings
         self.actionSave.triggered.connect(self.save_file)
         self.actionOpen.triggered.connect(self.open_file)
         self.actionSaveAs.triggered.connect(self.save_as_file)
         self.actionClose.triggered.connect(self.exit)
-        
+
         # Driver Actions
         self.actionBaud.triggered.connect(self.baud_rate_dialog)
         self.actionCom.triggered.connect(self.com_port_dialog)
         self.actionRun.triggered.connect(self.start_driver)
         self.actionStop.triggered.connect(self.stop_driver)
-        
-        #Serial Monitor Actions 
-        self.actionSerialMonitor.triggered.connect(self.serial_monitor_dialog)
+
+        # Serial Monitor Actions
+        self.actionSerialMonitor.triggered.connect(self.show_serial_monitor)
+
+    def _initialize_windows(self):
+        self.serial_monitor = None
 
 
-        self.unsaved_changes = False
-        self.com_port = serial_ports()[0]
-        self.baud_rate = 9600
-        self.state = AppState.STOPPED
+    def _initialize_worker(self):
         self.serialWorker = SerialWorker(self.com_port, self.baud_rate)
         self.serialWorker.completed.connect(self.driver_completed)
         self.serialWorker.received_input.connect(self.process_input)
 
-        self.initialize_combos()
-
-        self.load_default_config()
-
-    def initialize_combos(self):
+    def _initialize_combos(self):
         self.joystick_combos = [
             self.joycombo_1,
             self.joycombo_2,
@@ -116,23 +129,22 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # Start Thread
         self.serialWorker.stop_flag = False
-        
+
         self.serialWorker.start()
         self.state = AppState.RUNNING
         self.driverStateLabel.setText(self.state.name)
-    
+
     def stop_driver(self):
-        if (self.serialWorker.isRunning):
+        if self.serialWorker.isRunning:
             self.serialWorker.stop_flag = True
         self.state = AppState.STOPPED
         self.driverStateLabel.setText(self.state.name)
-    
+
     def driver_completed(self):
         print("Thread Completed")
         # Enable com and baudrate dialogs
         self.actionBaud.setEnabled(True)
         self.actionCom.setEnabled(True)
-
 
     def _load_config(self, file_name):
         if not os.path.isfile(file_name):
@@ -208,7 +220,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         )
         self._load_config(file_name)
 
-
     def closeEvent(self, evnt):
         if self.unsaved_changes:
             closeDialog = CloseDialog(self)
@@ -228,30 +239,29 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if accepted:
             self.close()
 
-
     def baud_rate_dialog(self):
         baud_dialog = BaudDialog(self)
         accepted = baud_dialog.exec()
-        if (accepted):
+        if accepted:
             self.baud_rate = int(baud_dialog.baud_rate)
             self.serialWorker.setBaudrate(self.baud_rate)
 
     def com_port_dialog(self):
         com_port_dialog = ComDialog(self)
         accepted = com_port_dialog.exec()
-        if (accepted):
+        if accepted:
             self.com_port = com_port_dialog.com_port
             self.serialWorker.setPort(self.com_port)
 
-    
-    def serial_monitor_dialog(self):
-        self.serial_monitor_window = SerialMonitor()
-        self.serial_monitor_window.show()
+    def show_serial_monitor(self):
+        if self.serial_monitor is None:
+            self.serial_monitor = SerialMonitor()
+            self.serial_monitor.show()
+        else:
+            self.serial_monitor.close()
+            self.serial_monitor = None
 
     def process_input(self, data):
-        active_window = QApplication.activeWindow()
-        if (active_window.windowTitle() == "Serial Monitor"):
-            # Send data to serial monitor 
-            self.serial_monitor_window.received_data.emit(data)
-        
-        
+        if self.serial_monitor is not None:
+            # Send data to serial monitor
+            self.serial_monitor.received_data.emit(data)
