@@ -2,6 +2,7 @@ import sys
 import glob
 import serial
 
+
 # https://stackoverflow.com/questions/12090503/listing-available-com-ports-with-python
 def serial_ports():
     """Lists serial port names
@@ -30,5 +31,3 @@ def serial_ports():
         except (OSError, serial.SerialException):
             pass
     return result
-
-
