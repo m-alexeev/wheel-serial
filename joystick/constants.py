@@ -25,13 +25,13 @@ INPUT_AXIS_MAPPING = {
     "Left": {
         "Left": {"axis": HID_USAGE_X, "value": MIN},
         "Right": {"axis": HID_USAGE_X, "value": MAX},
-        "Up":{"axis": HID_USAGE_Y, "value": MIN},
-        "Down":{"axis": HID_USAGE_Y, "value": MAX},
+        "Up": {"axis": HID_USAGE_Y, "value": MIN},
+        "Down": {"axis": HID_USAGE_Y, "value": MAX},
     },
     "Right": {
         "Left": {"axis": HID_USAGE_RX, "value": MIN},
         "Right": {"axis": HID_USAGE_RX, "value": MAX},
-        "Up":{"axis": HID_USAGE_RY, "value": MIN},
-        "Down":{"axis": HID_USAGE_RY, "value": MAX},
-    }
+        "Up": {"axis": HID_USAGE_RY, "value": MIN},
+        "Down": {"axis": HID_USAGE_RY, "value": MAX},
+    },
 }

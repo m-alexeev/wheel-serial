@@ -1,6 +1,7 @@
 from ui.generated.baudDialog import Ui_Dialog
 from PyQt6.QtWidgets import QDialog
 
+
 class BaudDialog(QDialog, Ui_Dialog):
     """Dialog for selecting com port baudrate"""
 
@@ -10,7 +11,7 @@ class BaudDialog(QDialog, Ui_Dialog):
 
         self._populate_combo_box()
         self.baud_rate = None
-        
+
     def _populate_combo_box(self):
         baud_rates = [
             "110",
@@ -29,9 +30,8 @@ class BaudDialog(QDialog, Ui_Dialog):
             "256000",
         ]
         self.baudCombo.addItems(baud_rates)
-            
-    def accept(self) -> None:
-        if (self.baudCombo.currentIndex() > -1):
-            self.baud_rate = self.baudCombo.currentText()
-        return super().accept()        
 
+    def accept(self) -> None:
+        if self.baudCombo.currentIndex() > -1:
+            self.baud_rate = self.baudCombo.currentText()
+        return super().accept()

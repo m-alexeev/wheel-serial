@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QDialog
 from ui.generated.closeDialog import Ui_Dialog
 
+
 class CloseDialog(QDialog, Ui_Dialog):
     """Close dialog."""
 

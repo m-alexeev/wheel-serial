@@ -13,4 +13,3 @@ def press_button(joystick: VJoyDevice, button_id: int):
     joystick.set_button(button_id, ON)
     sleep(0.05)
     joystick.set_button(button_id, OFF)
-

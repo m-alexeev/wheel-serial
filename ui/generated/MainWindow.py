@@ -68,14 +68,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_81.setObjectName("horizontalLayout_81")
         self.label_83 = QtWidgets.QLabel(parent=self.widget_63)
         self.label_83.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_83.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_83.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_83.setObjectName("label_83")
         self.horizontalLayout_81.addWidget(self.label_83)
         self.encodercombo_1 = QtWidgets.QComboBox(parent=self.widget_63)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.encodercombo_1.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.encodercombo_1.sizePolicy().hasHeightForWidth()
+        )
         self.encodercombo_1.setSizePolicy(sizePolicy)
         self.encodercombo_1.setObjectName("encodercombo_1")
         self.horizontalLayout_81.addWidget(self.encodercombo_1)
@@ -88,14 +97,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_28.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_28.setObjectName("horizontalLayout_28")
         self.label_30 = QtWidgets.QLabel(parent=self.widget_20)
-        self.label_30.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_30.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_30.setObjectName("label_30")
         self.horizontalLayout_28.addWidget(self.label_30)
         self.encodercombo_2 = QtWidgets.QComboBox(parent=self.widget_20)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.encodercombo_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.encodercombo_2.sizePolicy().hasHeightForWidth()
+        )
         self.encodercombo_2.setSizePolicy(sizePolicy)
         self.encodercombo_2.setObjectName("encodercombo_2")
         self.horizontalLayout_28.addWidget(self.encodercombo_2)
@@ -117,14 +135,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_82.setObjectName("horizontalLayout_82")
         self.label_84 = QtWidgets.QLabel(parent=self.widget_64)
         self.label_84.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_84.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_84.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_84.setObjectName("label_84")
         self.horizontalLayout_82.addWidget(self.label_84)
         self.encodercombo_3 = QtWidgets.QComboBox(parent=self.widget_64)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.encodercombo_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.encodercombo_3.sizePolicy().hasHeightForWidth()
+        )
         self.encodercombo_3.setSizePolicy(sizePolicy)
         self.encodercombo_3.setObjectName("encodercombo_3")
         self.horizontalLayout_82.addWidget(self.encodercombo_3)
@@ -137,14 +164,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_29.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_29.setObjectName("horizontalLayout_29")
         self.label_31 = QtWidgets.QLabel(parent=self.widget_21)
-        self.label_31.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_31.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_31.setObjectName("label_31")
         self.horizontalLayout_29.addWidget(self.label_31)
         self.encodercombo_4 = QtWidgets.QComboBox(parent=self.widget_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.encodercombo_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.encodercombo_4.sizePolicy().hasHeightForWidth()
+        )
         self.encodercombo_4.setSizePolicy(sizePolicy)
         self.encodercombo_4.setObjectName("encodercombo_4")
         self.horizontalLayout_29.addWidget(self.encodercombo_4)
@@ -174,14 +210,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_83.setObjectName("horizontalLayout_83")
         self.label_85 = QtWidgets.QLabel(parent=self.widget_65)
         self.label_85.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_85.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_85.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_85.setObjectName("label_85")
         self.horizontalLayout_83.addWidget(self.label_85)
         self.togglecombo_1 = QtWidgets.QComboBox(parent=self.widget_65)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.togglecombo_1.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.togglecombo_1.sizePolicy().hasHeightForWidth()
+        )
         self.togglecombo_1.setSizePolicy(sizePolicy)
         self.togglecombo_1.setObjectName("togglecombo_1")
         self.horizontalLayout_83.addWidget(self.togglecombo_1)
@@ -194,14 +239,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.label_32 = QtWidgets.QLabel(parent=self.widget_22)
-        self.label_32.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_32.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_32.setObjectName("label_32")
         self.horizontalLayout_30.addWidget(self.label_32)
         self.togglecombo_2 = QtWidgets.QComboBox(parent=self.widget_22)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.togglecombo_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.togglecombo_2.sizePolicy().hasHeightForWidth()
+        )
         self.togglecombo_2.setSizePolicy(sizePolicy)
         self.togglecombo_2.setObjectName("togglecombo_2")
         self.horizontalLayout_30.addWidget(self.togglecombo_2)
@@ -223,14 +277,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_84.setObjectName("horizontalLayout_84")
         self.label_86 = QtWidgets.QLabel(parent=self.widget_66)
         self.label_86.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_86.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_86.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_86.setObjectName("label_86")
         self.horizontalLayout_84.addWidget(self.label_86)
         self.togglecombo_3 = QtWidgets.QComboBox(parent=self.widget_66)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.togglecombo_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.togglecombo_3.sizePolicy().hasHeightForWidth()
+        )
         self.togglecombo_3.setSizePolicy(sizePolicy)
         self.togglecombo_3.setObjectName("togglecombo_3")
         self.horizontalLayout_84.addWidget(self.togglecombo_3)
@@ -243,14 +306,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_31.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_31.setObjectName("horizontalLayout_31")
         self.label_33 = QtWidgets.QLabel(parent=self.widget_23)
-        self.label_33.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_33.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_33.setObjectName("label_33")
         self.horizontalLayout_31.addWidget(self.label_33)
         self.togglecombo_4 = QtWidgets.QComboBox(parent=self.widget_23)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.togglecombo_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.togglecombo_4.sizePolicy().hasHeightForWidth()
+        )
         self.togglecombo_4.setSizePolicy(sizePolicy)
         self.togglecombo_4.setObjectName("togglecombo_4")
         self.horizontalLayout_31.addWidget(self.togglecombo_4)
@@ -276,14 +348,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
         self.label_11 = QtWidgets.QLabel(parent=self.widget_5)
-        self.label_11.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_11.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_12.addWidget(self.label_11)
         self.buttoncombo_7 = QtWidgets.QComboBox(parent=self.widget_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_7.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_7.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_7.setSizePolicy(sizePolicy)
         self.buttoncombo_7.setObjectName("buttoncombo_7")
         self.horizontalLayout_12.addWidget(self.buttoncombo_7)
@@ -294,14 +375,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.label_7 = QtWidgets.QLabel(parent=self.widget)
-        self.label_7.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_7.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_8.addWidget(self.label_7)
         self.buttoncombo_1 = QtWidgets.QComboBox(parent=self.widget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_1.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_1.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_1.setSizePolicy(sizePolicy)
         self.buttoncombo_1.setObjectName("buttoncombo_1")
         self.horizontalLayout_8.addWidget(self.buttoncombo_1)
@@ -312,14 +402,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.label_8 = QtWidgets.QLabel(parent=self.widget_2)
-        self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_8.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_8.setObjectName("label_8")
         self.horizontalLayout_9.addWidget(self.label_8)
         self.buttoncombo_5 = QtWidgets.QComboBox(parent=self.widget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_5.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_5.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_5.setSizePolicy(sizePolicy)
         self.buttoncombo_5.setObjectName("buttoncombo_5")
         self.horizontalLayout_9.addWidget(self.buttoncombo_5)
@@ -330,14 +429,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(parent=self.widget1)
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
         self.buttoncombo_2 = QtWidgets.QComboBox(parent=self.widget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_2.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_2.setSizePolicy(sizePolicy)
         self.buttoncombo_2.setObjectName("buttoncombo_2")
         self.horizontalLayout_2.addWidget(self.buttoncombo_2)
@@ -350,14 +458,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
         self.label_12 = QtWidgets.QLabel(parent=self.widget_6)
-        self.label_12.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_12.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_13.addWidget(self.label_12)
         self.buttoncombo_10 = QtWidgets.QComboBox(parent=self.widget_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_10.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_10.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_10.setSizePolicy(sizePolicy)
         self.buttoncombo_10.setObjectName("buttoncombo_10")
         self.horizontalLayout_13.addWidget(self.buttoncombo_10)
@@ -368,14 +485,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_18.setObjectName("horizontalLayout_18")
         self.label_17 = QtWidgets.QLabel(parent=self.widget_11)
-        self.label_17.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_17.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_17.setObjectName("label_17")
         self.horizontalLayout_18.addWidget(self.label_17)
         self.buttoncombo_4 = QtWidgets.QComboBox(parent=self.widget_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_4.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_4.setSizePolicy(sizePolicy)
         self.buttoncombo_4.setObjectName("buttoncombo_4")
         self.horizontalLayout_18.addWidget(self.buttoncombo_4)
@@ -386,14 +512,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_36.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_36.setObjectName("horizontalLayout_36")
         self.label_42 = QtWidgets.QLabel(parent=self.widget_28)
-        self.label_42.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_42.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_42.setObjectName("label_42")
         self.horizontalLayout_36.addWidget(self.label_42)
         self.buttoncombo_8 = QtWidgets.QComboBox(parent=self.widget_28)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_8.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_8.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_8.setSizePolicy(sizePolicy)
         self.buttoncombo_8.setObjectName("buttoncombo_8")
         self.horizontalLayout_36.addWidget(self.buttoncombo_8)
@@ -404,14 +539,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
         self.label_14 = QtWidgets.QLabel(parent=self.widget_8)
-        self.label_14.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_14.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_14.setObjectName("label_14")
         self.horizontalLayout_15.addWidget(self.label_14)
         self.buttoncombo_11 = QtWidgets.QComboBox(parent=self.widget_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_11.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_11.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_11.setSizePolicy(sizePolicy)
         self.buttoncombo_11.setObjectName("buttoncombo_11")
         self.horizontalLayout_15.addWidget(self.buttoncombo_11)
@@ -422,14 +566,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
         self.label_13 = QtWidgets.QLabel(parent=self.widget_7)
-        self.label_13.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_13.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_13.setObjectName("label_13")
         self.horizontalLayout_14.addWidget(self.label_13)
         self.buttoncombo_9 = QtWidgets.QComboBox(parent=self.widget_7)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_9.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_9.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_9.setSizePolicy(sizePolicy)
         self.buttoncombo_9.setObjectName("buttoncombo_9")
         self.horizontalLayout_14.addWidget(self.buttoncombo_9)
@@ -440,14 +593,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         self.label_10 = QtWidgets.QLabel(parent=self.widget_4)
-        self.label_10.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_10.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_11.addWidget(self.label_10)
         self.buttoncombo_3 = QtWidgets.QComboBox(parent=self.widget_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_3.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_3.setSizePolicy(sizePolicy)
         self.buttoncombo_3.setObjectName("buttoncombo_3")
         self.horizontalLayout_11.addWidget(self.buttoncombo_3)
@@ -458,14 +620,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
         self.label_9 = QtWidgets.QLabel(parent=self.widget_3)
-        self.label_9.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_9.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_9.setObjectName("label_9")
         self.horizontalLayout_10.addWidget(self.label_9)
         self.buttoncombo_6 = QtWidgets.QComboBox(parent=self.widget_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.buttoncombo_6.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.buttoncombo_6.sizePolicy().hasHeightForWidth()
+        )
         self.buttoncombo_6.setSizePolicy(sizePolicy)
         self.buttoncombo_6.setObjectName("buttoncombo_6")
         self.horizontalLayout_10.addWidget(self.buttoncombo_6)
@@ -491,11 +662,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_27.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_27.setObjectName("horizontalLayout_27")
         self.label_29 = QtWidgets.QLabel(parent=self.widget_19)
-        self.label_29.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_29.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_29.setObjectName("label_29")
         self.horizontalLayout_27.addWidget(self.label_29)
         self.joycombo_1 = QtWidgets.QComboBox(parent=self.widget_19)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_1.sizePolicy().hasHeightForWidth())
@@ -513,11 +691,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_69.setObjectName("horizontalLayout_69")
         self.label_70 = QtWidgets.QLabel(parent=self.widget_51)
         self.label_70.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_70.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_70.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_70.setObjectName("label_70")
         self.horizontalLayout_69.addWidget(self.label_70)
         self.joycombo_2 = QtWidgets.QComboBox(parent=self.widget_51)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_2.sizePolicy().hasHeightForWidth())
@@ -534,11 +719,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_70.setObjectName("horizontalLayout_70")
         self.label_71 = QtWidgets.QLabel(parent=self.widget_52)
         self.label_71.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_71.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_71.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_71.setObjectName("label_71")
         self.horizontalLayout_70.addWidget(self.label_71)
         self.joycombo_3 = QtWidgets.QComboBox(parent=self.widget_52)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_3.sizePolicy().hasHeightForWidth())
@@ -555,11 +747,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
         self.label_28 = QtWidgets.QLabel(parent=self.widget_18)
         self.label_28.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_28.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_28.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_28.setObjectName("label_28")
         self.horizontalLayout_26.addWidget(self.label_28)
         self.joycombo_4 = QtWidgets.QComboBox(parent=self.widget_18)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_4.sizePolicy().hasHeightForWidth())
@@ -576,11 +775,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_44.setObjectName("horizontalLayout_44")
         self.label_34 = QtWidgets.QLabel(parent=self.widget_36)
         self.label_34.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_34.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_34.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_34.setObjectName("label_34")
         self.horizontalLayout_44.addWidget(self.label_34)
         self.comboBox_42 = QtWidgets.QComboBox(parent=self.widget_36)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.comboBox_42.sizePolicy().hasHeightForWidth())
@@ -604,11 +810,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_37.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_37.setObjectName("horizontalLayout_37")
         self.label_43 = QtWidgets.QLabel(parent=self.widget_29)
-        self.label_43.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_43.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_43.setObjectName("label_43")
         self.horizontalLayout_37.addWidget(self.label_43)
         self.joycombo_5 = QtWidgets.QComboBox(parent=self.widget_29)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_5.sizePolicy().hasHeightForWidth())
@@ -625,11 +838,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_73.setObjectName("horizontalLayout_73")
         self.label_73 = QtWidgets.QLabel(parent=self.widget_53)
         self.label_73.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_73.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_73.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_73.setObjectName("label_73")
         self.horizontalLayout_73.addWidget(self.label_73)
         self.joycombo_6 = QtWidgets.QComboBox(parent=self.widget_53)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_6.sizePolicy().hasHeightForWidth())
@@ -646,11 +866,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_74.setObjectName("horizontalLayout_74")
         self.label_74 = QtWidgets.QLabel(parent=self.widget_54)
         self.label_74.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_74.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_74.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_74.setObjectName("label_74")
         self.horizontalLayout_74.addWidget(self.label_74)
         self.joycombo_7 = QtWidgets.QComboBox(parent=self.widget_54)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_7.sizePolicy().hasHeightForWidth())
@@ -667,11 +894,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
         self.label_44 = QtWidgets.QLabel(parent=self.widget_30)
         self.label_44.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_44.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_44.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_44.setObjectName("label_44")
         self.horizontalLayout_38.addWidget(self.label_44)
         self.joycombo_8 = QtWidgets.QComboBox(parent=self.widget_30)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.joycombo_8.sizePolicy().hasHeightForWidth())
@@ -688,11 +922,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_47.setObjectName("horizontalLayout_47")
         self.label_50 = QtWidgets.QLabel(parent=self.widget_37)
         self.label_50.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.label_50.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_50.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_50.setObjectName("label_50")
         self.horizontalLayout_47.addWidget(self.label_50)
         self.comboBox_45 = QtWidgets.QComboBox(parent=self.widget_37)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.comboBox_45.sizePolicy().hasHeightForWidth())
@@ -728,14 +969,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_39.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_39.setObjectName("horizontalLayout_39")
         self.label_75 = QtWidgets.QLabel(parent=self.widget_55)
-        self.label_75.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_75.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_75.setObjectName("label_75")
         self.horizontalLayout_39.addWidget(self.label_75)
         self.rotencodercombo_7 = QtWidgets.QComboBox(parent=self.widget_55)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_7.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_7.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_7.setSizePolicy(sizePolicy)
         self.rotencodercombo_7.setObjectName("rotencodercombo_7")
         self.horizontalLayout_39.addWidget(self.rotencodercombo_7)
@@ -746,14 +996,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_63.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_63.setObjectName("horizontalLayout_63")
         self.label_76 = QtWidgets.QLabel(parent=self.widget_56)
-        self.label_76.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_76.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_76.setObjectName("label_76")
         self.horizontalLayout_63.addWidget(self.label_76)
         self.rotencodercombo_3 = QtWidgets.QComboBox(parent=self.widget_56)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_3.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_3.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_3.setSizePolicy(sizePolicy)
         self.rotencodercombo_3.setObjectName("rotencodercombo_3")
         self.horizontalLayout_63.addWidget(self.rotencodercombo_3)
@@ -764,14 +1023,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_75.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_75.setObjectName("horizontalLayout_75")
         self.label_77 = QtWidgets.QLabel(parent=self.widget_57)
-        self.label_77.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_77.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_77.setObjectName("label_77")
         self.horizontalLayout_75.addWidget(self.label_77)
         self.rotencodercombo_2 = QtWidgets.QComboBox(parent=self.widget_57)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_2.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_2.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_2.setSizePolicy(sizePolicy)
         self.rotencodercombo_2.setObjectName("rotencodercombo_2")
         self.horizontalLayout_75.addWidget(self.rotencodercombo_2)
@@ -782,14 +1050,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_76.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_76.setObjectName("horizontalLayout_76")
         self.label_78 = QtWidgets.QLabel(parent=self.widget_58)
-        self.label_78.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_78.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_78.setObjectName("label_78")
         self.horizontalLayout_76.addWidget(self.label_78)
         self.rotencodercombo_4 = QtWidgets.QComboBox(parent=self.widget_58)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_4.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_4.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_4.setSizePolicy(sizePolicy)
         self.rotencodercombo_4.setObjectName("rotencodercombo_4")
         self.horizontalLayout_76.addWidget(self.rotencodercombo_4)
@@ -800,14 +1077,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_77.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_77.setObjectName("horizontalLayout_77")
         self.label_79 = QtWidgets.QLabel(parent=self.widget_59)
-        self.label_79.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_79.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_79.setObjectName("label_79")
         self.horizontalLayout_77.addWidget(self.label_79)
         self.rotencodercombo_8 = QtWidgets.QComboBox(parent=self.widget_59)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_8.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_8.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_8.setSizePolicy(sizePolicy)
         self.rotencodercombo_8.setObjectName("rotencodercombo_8")
         self.horizontalLayout_77.addWidget(self.rotencodercombo_8)
@@ -818,14 +1104,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_78.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_78.setObjectName("horizontalLayout_78")
         self.label_80 = QtWidgets.QLabel(parent=self.widget_60)
-        self.label_80.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_80.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_80.setObjectName("label_80")
         self.horizontalLayout_78.addWidget(self.label_80)
         self.rotencodercombo_5 = QtWidgets.QComboBox(parent=self.widget_60)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_5.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_5.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_5.setSizePolicy(sizePolicy)
         self.rotencodercombo_5.setObjectName("rotencodercombo_5")
         self.horizontalLayout_78.addWidget(self.rotencodercombo_5)
@@ -836,14 +1131,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_79.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_79.setObjectName("horizontalLayout_79")
         self.label_81 = QtWidgets.QLabel(parent=self.widget_61)
-        self.label_81.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_81.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_81.setObjectName("label_81")
         self.horizontalLayout_79.addWidget(self.label_81)
         self.rotencodercombo_6 = QtWidgets.QComboBox(parent=self.widget_61)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_6.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_6.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_6.setSizePolicy(sizePolicy)
         self.rotencodercombo_6.setObjectName("rotencodercombo_6")
         self.horizontalLayout_79.addWidget(self.rotencodercombo_6)
@@ -854,14 +1158,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_80.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_80.setObjectName("horizontalLayout_80")
         self.label_82 = QtWidgets.QLabel(parent=self.widget_62)
-        self.label_82.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_82.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_82.setObjectName("label_82")
         self.horizontalLayout_80.addWidget(self.label_82)
         self.rotencodercombo_1 = QtWidgets.QComboBox(parent=self.widget_62)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_1.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_1.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_1.setSizePolicy(sizePolicy)
         self.rotencodercombo_1.setObjectName("rotencodercombo_1")
         self.horizontalLayout_80.addWidget(self.rotencodercombo_1)
@@ -881,14 +1194,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_55.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_55.setObjectName("horizontalLayout_55")
         self.label_49 = QtWidgets.QLabel(parent=self.widget_35)
-        self.label_49.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_49.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_49.setObjectName("label_49")
         self.horizontalLayout_55.addWidget(self.label_49)
         self.rotencodercombo_15 = QtWidgets.QComboBox(parent=self.widget_35)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_15.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_15.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_15.setSizePolicy(sizePolicy)
         self.rotencodercombo_15.setObjectName("rotencodercombo_15")
         self.horizontalLayout_55.addWidget(self.rotencodercombo_15)
@@ -899,14 +1221,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_56.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_56.setObjectName("horizontalLayout_56")
         self.label_58 = QtWidgets.QLabel(parent=self.widget_44)
-        self.label_58.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_58.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_58.setObjectName("label_58")
         self.horizontalLayout_56.addWidget(self.label_58)
         self.rotencodercombo_11 = QtWidgets.QComboBox(parent=self.widget_44)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_11.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_11.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_11.setSizePolicy(sizePolicy)
         self.rotencodercombo_11.setObjectName("rotencodercombo_11")
         self.horizontalLayout_56.addWidget(self.rotencodercombo_11)
@@ -917,14 +1248,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_57.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_57.setObjectName("horizontalLayout_57")
         self.label_59 = QtWidgets.QLabel(parent=self.widget_45)
-        self.label_59.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_59.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_59.setObjectName("label_59")
         self.horizontalLayout_57.addWidget(self.label_59)
         self.rotencodercombo_10 = QtWidgets.QComboBox(parent=self.widget_45)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_10.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_10.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_10.setSizePolicy(sizePolicy)
         self.rotencodercombo_10.setObjectName("rotencodercombo_10")
         self.horizontalLayout_57.addWidget(self.rotencodercombo_10)
@@ -935,14 +1275,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_58.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_58.setObjectName("horizontalLayout_58")
         self.label_60 = QtWidgets.QLabel(parent=self.widget_46)
-        self.label_60.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_60.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_60.setObjectName("label_60")
         self.horizontalLayout_58.addWidget(self.label_60)
         self.rotencodercombo_12 = QtWidgets.QComboBox(parent=self.widget_46)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_12.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_12.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_12.setSizePolicy(sizePolicy)
         self.rotencodercombo_12.setObjectName("rotencodercombo_12")
         self.horizontalLayout_58.addWidget(self.rotencodercombo_12)
@@ -953,14 +1302,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_59.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_59.setObjectName("horizontalLayout_59")
         self.label_61 = QtWidgets.QLabel(parent=self.widget_47)
-        self.label_61.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_61.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_61.setObjectName("label_61")
         self.horizontalLayout_59.addWidget(self.label_61)
         self.rotencodercombo_16 = QtWidgets.QComboBox(parent=self.widget_47)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_16.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_16.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_16.setSizePolicy(sizePolicy)
         self.rotencodercombo_16.setObjectName("rotencodercombo_16")
         self.horizontalLayout_59.addWidget(self.rotencodercombo_16)
@@ -971,14 +1329,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_60.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_60.setObjectName("horizontalLayout_60")
         self.label_62 = QtWidgets.QLabel(parent=self.widget_48)
-        self.label_62.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_62.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_62.setObjectName("label_62")
         self.horizontalLayout_60.addWidget(self.label_62)
         self.rotencodercombo_13 = QtWidgets.QComboBox(parent=self.widget_48)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_13.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_13.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_13.setSizePolicy(sizePolicy)
         self.rotencodercombo_13.setObjectName("rotencodercombo_13")
         self.horizontalLayout_60.addWidget(self.rotencodercombo_13)
@@ -989,14 +1356,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_61.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_61.setObjectName("horizontalLayout_61")
         self.label_63 = QtWidgets.QLabel(parent=self.widget_49)
-        self.label_63.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_63.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_63.setObjectName("label_63")
         self.horizontalLayout_61.addWidget(self.label_63)
         self.rotencodercombo_14 = QtWidgets.QComboBox(parent=self.widget_49)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_14.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_14.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_14.setSizePolicy(sizePolicy)
         self.rotencodercombo_14.setObjectName("rotencodercombo_14")
         self.horizontalLayout_61.addWidget(self.rotencodercombo_14)
@@ -1007,14 +1383,23 @@ class Ui_MainWindow(object):
         self.horizontalLayout_62.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_62.setObjectName("horizontalLayout_62")
         self.label_64 = QtWidgets.QLabel(parent=self.widget_50)
-        self.label_64.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_64.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignRight
+            | QtCore.Qt.AlignmentFlag.AlignTrailing
+            | QtCore.Qt.AlignmentFlag.AlignVCenter
+        )
         self.label_64.setObjectName("label_64")
         self.horizontalLayout_62.addWidget(self.label_64)
         self.rotencodercombo_9 = QtWidgets.QComboBox(parent=self.widget_50)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.MinimumExpanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Policy.MinimumExpanding,
+            QtWidgets.QSizePolicy.Policy.Fixed,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.rotencodercombo_9.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.rotencodercombo_9.sizePolicy().hasHeightForWidth()
+        )
         self.rotencodercombo_9.setSizePolicy(sizePolicy)
         self.rotencodercombo_9.setEditable(False)
         self.rotencodercombo_9.setObjectName("rotencodercombo_9")
@@ -1202,38 +1587,70 @@ class Ui_MainWindow(object):
         self.groupBox.setTitle(_translate("MainWindow", "Rotary Encoders"))
         self.groupBox_5.setTitle(_translate("MainWindow", "Left Encoder"))
         self.label_75.setText(_translate("MainWindow", "Pos7"))
-        self.rotencodercombo_7.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_7.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_76.setText(_translate("MainWindow", "Pos3"))
-        self.rotencodercombo_3.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_3.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_77.setText(_translate("MainWindow", "Pos2"))
-        self.rotencodercombo_2.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_2.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_78.setText(_translate("MainWindow", "Pos4"))
-        self.rotencodercombo_4.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_4.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_79.setText(_translate("MainWindow", "Pos8"))
-        self.rotencodercombo_8.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_8.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_80.setText(_translate("MainWindow", "Pos5"))
-        self.rotencodercombo_5.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_5.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_81.setText(_translate("MainWindow", "Pos6"))
-        self.rotencodercombo_6.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_6.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_82.setText(_translate("MainWindow", "Pos1"))
-        self.rotencodercombo_1.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_1.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.groupBox_6.setTitle(_translate("MainWindow", "Right Encoder"))
         self.label_49.setText(_translate("MainWindow", "Pos7"))
-        self.rotencodercombo_15.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_15.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_58.setText(_translate("MainWindow", "Pos3"))
-        self.rotencodercombo_11.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_11.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_59.setText(_translate("MainWindow", "Pos2"))
-        self.rotencodercombo_10.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_10.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_60.setText(_translate("MainWindow", "Pos4"))
-        self.rotencodercombo_12.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_12.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_61.setText(_translate("MainWindow", "Pos8"))
-        self.rotencodercombo_16.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_16.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_62.setText(_translate("MainWindow", "Pos5"))
-        self.rotencodercombo_13.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_13.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_63.setText(_translate("MainWindow", "Pos6"))
-        self.rotencodercombo_14.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_14.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.label_64.setText(_translate("MainWindow", "Pos1"))
-        self.rotencodercombo_9.setPlaceholderText(_translate("MainWindow", "Select Input"))
+        self.rotencodercombo_9.setPlaceholderText(
+            _translate("MainWindow", "Select Input")
+        )
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuRun.setTitle(_translate("MainWindow", "Run"))
         self.menuTootls.setTitle(_translate("MainWindow", "Tools"))

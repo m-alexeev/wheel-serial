@@ -27,7 +27,11 @@ class Ui_Frame(object):
         self.serialText = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents)
         self.serialText.setBaseSize(QtCore.QSize(720, 480))
         self.serialText.setText("")
-        self.serialText.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.serialText.setAlignment(
+            QtCore.Qt.AlignmentFlag.AlignLeading
+            | QtCore.Qt.AlignmentFlag.AlignLeft
+            | QtCore.Qt.AlignmentFlag.AlignTop
+        )
         self.serialText.setObjectName("serialText")
         self.horizontalLayout.addWidget(self.serialText)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)

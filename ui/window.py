@@ -55,7 +55,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.baud_rate = 9600
         self.state = AppState.STOPPED
 
-
     def _initialize_windows(self):
         self.serial_monitor = None
 
