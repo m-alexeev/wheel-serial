@@ -31,3 +31,5 @@ def serial_ports():
         except (OSError, serial.SerialException):
             pass
     return result
+
+print(serial_ports())
