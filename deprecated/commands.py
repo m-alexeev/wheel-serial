@@ -1,5 +1,5 @@
 from threading import Event, Thread, activeCount
-from keyboard import PressKey, ReleaseKey
+from deprecated.keyboard import PressKey, ReleaseKey
 from serial import Serial
 from time import sleep
 from tkinter import StringVar

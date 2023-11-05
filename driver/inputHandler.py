@@ -24,9 +24,9 @@ class InputHandler():
         
     def process_input(self, data: str):
         input, value = data.split("|")
-        if (input == InputType.BUTTON.name):
+        if (input.upper() == InputType.BUTTON.name):
             self.button_press(value)
-        if (input == InputType.JOYSTICK.name):
+        if (input.upper() == InputType.JOYSTICK.name):
             axis, position = value.split("-")
             self.joystick_press(int(axis), int(position))
         

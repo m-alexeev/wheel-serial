@@ -1,16 +1,16 @@
+from driver.configHandler import ConfigHandler
 from driver.serialWorker import SerialWorker
 import enum
 from joystick.constants import BUTTON_INPUTS, JOY_INPUTS
 import json
 import os
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QFileDialog, QApplication
+from PyQt6.QtWidgets import QFileDialog
 from ui.generated.MainWindow import Ui_MainWindow
 from ui.baudDialog import BaudDialog
 from ui.comDialog import ComDialog
 from ui.closeDialog import CloseDialog
 from ui.SerialMonitorWindow import SerialMonitor
-from utils import serial_ports
 
 """
 MainWindow
@@ -35,6 +35,8 @@ class AppState(enum.Enum):
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, obj=None, **kwargs) -> None:
         super(MainWindow, self).__init__(*args, **kwargs)
+        self.configuration = {}
+        
         self.setupUi(self)
         self.setWindowTitle("Wheel Binding Configurator")
 
@@ -80,7 +82,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.currentSaveFile = None
         self.unsaved_changes = False
-        self.com_port = serial_ports()[0]
+        self.com_port = None
         self.baud_rate = 9600
         self.state = AppState.STOPPED
 
@@ -223,10 +225,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             button_binds = saved_config.get("button_binds")
             for bind in joy_binds:
                 if joy_binds[bind] != "":
-                    self.joystick_combos[int(bind)].setCurrentText(joy_binds[bind])
+                    self.joystick_combos[int(bind)].setCurrentIndex(joy_binds[bind])
+                    self.configuration[bind] = joy_binds[bind]
             for bind in button_binds:
                 if button_binds[bind] != "":
-                    self.button_combos[int(bind)].setCurrentText(button_binds[bind])
+                    self.button_combos[int(bind)].setCurrentIndex(button_binds[bind])
+                    self.configuration[bind] = button_binds[bind]
+                    
 
         # Set current combo box state
         for combo in self.joystick_combos:
@@ -254,11 +259,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if self.currentSaveFile:
             with open(self.currentSaveFile, "w") as write_file:
                 joystick_binds = {
-                    i: combo.currentText()
+                    i: combo.currentIndex()
                     for i, combo in enumerate(self.joystick_combos)
                 }
                 button_binds = {
-                    i: combo.currentText() for i, combo in enumerate(self.button_combos)
+                    i: combo.currentIndex() for i, combo in enumerate(self.button_combos)
                 }
                 write_file.write(
                     json.dumps(
@@ -323,11 +328,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if res == 0:
                 evnt.ignore()
 
-    def on_combo_box_changed(self):
+    def on_combo_box_changed(self, index):
         """
         Trigger to set unsaved changes flag
         """
-
+        
         self.setWindowTitle("Wheel Binding Configurator *")
         self.unsaved_changes = True
 

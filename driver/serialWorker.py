@@ -1,4 +1,4 @@
-from inputHandler import InputHandler
+from driver.inputHandler import InputHandler
 from time import sleep
 from serial import Serial
 from PyQt6.QtCore import QThread, pyqtSignal
@@ -25,7 +25,7 @@ class SerialWorker(QThread):
         super().__init__()
         self.port = port
         self.baudrate = baudrate
-        self.inputHandler = InputHandler()
+        # self.inputHandler = InputHandler()
 
     def set_port(self, port):
         self.port = port
@@ -41,7 +41,7 @@ class SerialWorker(QThread):
                 while ser.in_waiting:
                     # Reading COM Port
                     data = ser.readline().decode('utf-8')
-                    self.inputHandler.process_input("Data")
+                    # self.inputHandler.process_input("")
                     self.received_input.emit(data)
                     sleep(0.1)
         else:
