@@ -179,6 +179,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Start Thread
         self.serialWorker.stop_flag = False
 
+        self.serialWorker.set_configuration(self.configuration)
         self.serialWorker.start()
         self.state = AppState.RUNNING
         self.driverStateLabel.setText(self.state.name)
@@ -234,11 +235,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     
 
         # Set current combo box state
-        for combo in self.joystick_combos:
-            combo.currentIndexChanged.connect(self.on_combo_box_changed)
+        for i, combo in enumerate(self.joystick_combos):
+            combo.currentIndexChanged.connect(lambda index, button_index=i: self.on_combo_box_changed(index, button_index))
 
-        for combo in self.button_combos:
-            combo.currentIndexChanged.connect(self.on_combo_box_changed)
+        for i, combo in enumerate(self.button_combos):
+            combo.currentIndexChanged.connect(lambda index, button_index=i: self.on_combo_box_changed(index, button_index))
 
     def load_default_config(self):
         """
@@ -328,11 +329,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if res == 0:
                 evnt.ignore()
 
-    def on_combo_box_changed(self, index):
+    def on_combo_box_changed(self, index, button_index):
         """
-        Trigger to set unsaved changes flag
+        Trigger to set unsaved changes flag and update configuration
         """
         
+        self.configuration[button_index] = index 
         self.setWindowTitle("Wheel Binding Configurator *")
         self.unsaved_changes = True
 

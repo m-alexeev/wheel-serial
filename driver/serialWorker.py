@@ -20,6 +20,7 @@ class SerialWorker(QThread):
     received_input = pyqtSignal(str)
 
     stop_flag = False
+    configuration = None
 
     def __init__(self, port, baudrate) -> None:
         super().__init__()
@@ -33,8 +34,22 @@ class SerialWorker(QThread):
     def set_baudrate(self, baudrate):
         self.baudrate = baudrate
 
+    def _filter_unconfigured_items(self, pair):
+        key, value = pair
+        print(f"{key}:{value}")
+        if value == -1: 
+            return False
+        else:
+            return True
+
+    def set_configuration(self, configuration): 
+        self.configuration = dict(filter(self._filter_unconfigured_items, configuration.items()))
+
     def run(self):
         # READ serial port
+        if self.configuration is None:
+            self.completed.emit()
+        
         ser = Serial(self.port, self.baudrate, timeout=0)
         while not self.stop_flag:
             while ser.is_open and not self.stop_flag:
